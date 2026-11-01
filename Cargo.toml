@@ -1,0 +1,12 @@
+[workspace]
+resolver = "3"
+# Add "crates/*" once the first shared crate exists: a glob matching nothing is an error.
+members = ["chapters/*"]
+
+# Shared dependency versions. Declare here, then use `<name>.workspace = true`
+# in a chapter's Cargo.toml.
+[workspace.dependencies]
+
+# Numeric code is very slow when fully unoptimised.
+[profile.dev]
+opt-level = 1
