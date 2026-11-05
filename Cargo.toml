@@ -6,6 +6,7 @@ members = ["chapters/*"]
 # Shared dependency versions. Declare here, then use `<name>.workspace = true`
 # in a chapter's Cargo.toml.
 [workspace.dependencies]
+nalgebra = "0.35.0"
 
 # Numeric code is very slow when fully unoptimised.
 [profile.dev]
