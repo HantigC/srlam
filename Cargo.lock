@@ -31,6 +31,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "ch01-rigid3d"
+version = "0.1.0"
+dependencies = [
+ "nalgebra",
+]
+
+[[package]]
 name = "glam"
 version = "0.30.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"

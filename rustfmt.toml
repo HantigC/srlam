@@ -1,0 +1,4 @@
+# Formatting rules for the whole workspace (read by rustfmt / cargo fmt / rust-analyzer).
+max_width = 90
+fn_params_layout = "Vertical"   # one parameter per line in fn definitions
+fn_call_width = 30
