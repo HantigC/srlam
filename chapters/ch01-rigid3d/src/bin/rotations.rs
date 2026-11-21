@@ -45,4 +45,11 @@ fn main() {
     println!("transform as matrix={}", transform.to_matrix());
     println!("v1_h{}", v1.to_homogeneous());
     println!("is_iso_mat={}", transform.to_matrix() * v1.to_homogeneous());
+    let q = na::UnitQuaternion::new(axi_angle);
+    println!("q={}", q);
+    let rotated_p_with_q = q * p1;
+    println!("rotated_p_with_q={}", rotated_p_with_q);
+    let rotated_v_with_q = q * v1;
+    println!("rotated_v_with_q={}", rotated_v_with_q);
+    println!("underneath rotated_v_with_q={}", q.quaternion() * na::Quaternion::new(0.0, v1.x, v1.y, v1.z) * q.inverse().quaternion());
 }
